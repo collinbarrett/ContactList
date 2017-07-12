@@ -2,7 +2,7 @@
 A simple practice MVC application built on .NET Core.
 
 ## Summary
-Develop a MVC/C# application; this application should only meet the attached use case.
+Develop a MVC/C# application; this application should only meet the below use case.
 
  - Primary actors: Any user
  - Preconditions:  Web site is running
