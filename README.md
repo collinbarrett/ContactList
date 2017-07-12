@@ -2,7 +2,7 @@
 A simple practice MVC application built on .NET Core.
 
 ## Summary
-Develop a MVC/C# application; this application should only meet the below use case.
+Develop an MVC/C# application; this application should only meet the below use case.
 
  - Primary actors: Any user
  - Preconditions:  Web site is running
@@ -18,13 +18,13 @@ Develop a MVC/C# application; this application should only meet the below use ca
     - Address (one)
     - Notes
  5. User selects “close”
- 6. Application displays/enables same list of contacts use was view when they selected a contact
+ 6. Application displays/enables the same list of contacts that was viewed before they selected a contact
 
 ## Alternate flows:
  3. This alternate flow begins after step 2
-    - User can browse to the next/previous 10 contacts
+    - User can browse to the next/previous ten contacts
 
 ## Other info
  - Initial contact list should have at least 25 fictional contacts 
- - Initial contact list should load from a XML file
- - User should NOT be able modify contacts
+ - Initial contact list should load from an XML file
+ - User should NOT be able to modify contacts
