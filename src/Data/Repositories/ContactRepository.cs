@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using System.Xml.Serialization;
 using Data.Entities.Contracts;
 using Data.Repositories.Contracts;
@@ -16,10 +15,11 @@ namespace Data.Repositories
         {
             var deserializer = new XmlSerializer(typeof(IEnumerable<IContact>));
             //TODO: load path from appsettings.json
-            using (var streamReader = new StreamReader(@"C:\ContactsList.xml"))
-            {
-                return (IEnumerable<IContact>) deserializer.Deserialize(streamReader);
-            }
+            //using (var streamReader = new StreamReader(@"C:\ContactsList.xml"))
+            //{
+            //    return (IEnumerable<IContact>) deserializer.Deserialize(streamReader);
+            //}
+            return null;
         }
     }
 }

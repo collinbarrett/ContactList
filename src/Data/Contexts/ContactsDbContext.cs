@@ -1,16 +1,16 @@
 ﻿using Data.Contexts.Contracts;
-using Data.Entities.Contracts;
+using Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Contexts
 {
-    internal class ContactsDbContext : DbContext, IContactsDbContext
+    public class ContactsDbContext : DbContext, IContactsDbContext
     {
         public ContactsDbContext(DbContextOptions options)
             : base(options)
         {
         }
 
-        public DbSet<IContact> Contacts { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

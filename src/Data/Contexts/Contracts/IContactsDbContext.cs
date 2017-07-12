@@ -1,10 +1,10 @@
-using Data.Entities.Contracts;
+using Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Contexts.Contracts
 {
-    internal interface IContactsDbContext
+    public interface IContactsDbContext
     {
-        DbSet<IContact> Contacts { get; set; }
+        DbSet<Contact> Contacts { get; set; }
     }
 }

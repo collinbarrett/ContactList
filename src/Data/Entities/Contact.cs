@@ -1,9 +1,13 @@
-﻿using Data.Entities.Contracts;
+﻿using System.ComponentModel.DataAnnotations;
+using Data.Entities.Contracts;
 
 namespace Data.Entities
 {
-    internal class Contact : IContact
+    public class Contact : IContact
     {
+        [Key]
+        public int Id { get; set; }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }

@@ -1,4 +1,6 @@
-﻿using Data.DependencyInjection.Extensions;
+﻿using Data.Contexts;
+using Data.DependencyInjection.Extensions;
+using Data.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -53,6 +55,31 @@ namespace Web
                     "default",
                     "{controller=Home}/{action=Index}/{id?}");
             });
+
+            var context = app.ApplicationServices.GetService<ContactsDbContext>();
+            LoadTestData(context);
+        }
+
+        private static void LoadTestData(ContactsDbContext context)
+        {
+            //TODO: load from XML
+            var testContact = new Contact
+            {
+                Id = 1,
+                FirstName = "Joe",
+                LastName = "Pottida",
+                EmailAddress = "joe@pottida.com",
+                BusinessPhone = "1-800-555-5555",
+                HomePhone = "1-800-555-5554",
+                MobilePhone = "1-800-555-5553",
+                StreetAddress = "123 S. Main St.",
+                City = "Kalamazoo",
+                State = "MI",
+                ZipCode = "55555",
+                Notes = "Joe is a person."
+            };
+            context.Contacts.Add(testContact);
+            context.SaveChanges();
         }
     }
 }

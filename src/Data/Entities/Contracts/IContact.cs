@@ -1,7 +1,12 @@
-﻿namespace Data.Entities.Contracts
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Data.Entities.Contracts
 {
-    internal interface IContact
+    public interface IContact
     {
+        [Key]
+        int Id { get; set; }
+
         string FirstName { get; set; }
         string LastName { get; set; }
         string EmailAddress { get; set; }
