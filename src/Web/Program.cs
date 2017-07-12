@@ -1,8 +1,7 @@
 ﻿using System.IO;
-using ContactList.Web;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ContactList
+namespace Web
 {
     public class Program
     {
