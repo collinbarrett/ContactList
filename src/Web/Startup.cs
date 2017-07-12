@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Data.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,7 @@ namespace Web
         {
             // Add framework services.
             services.AddMvc();
+            services.AddContactListRepositories();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
