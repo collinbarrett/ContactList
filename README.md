@@ -24,7 +24,7 @@ Develop an MVC/C# application; this application should only meet the below use c
  3. This alternate flow begins after step 2
     - User can browse to the next/previous ten contacts
 
-## Other info
+## Other info:
  - Initial contact list should have at least 25 fictional contacts 
  - Initial contact list should load from an XML file
  - User should NOT be able to modify contacts
