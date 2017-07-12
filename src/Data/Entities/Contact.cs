@@ -1,6 +1,8 @@
-﻿namespace Data.Entities
+﻿using Data.Entities.Contracts;
+
+namespace Data.Entities
 {
-    internal class Contact
+    internal class Contact : IContact
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
